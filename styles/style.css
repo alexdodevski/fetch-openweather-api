@@ -1,2 +1,145 @@
+@media screen and (max-width: 430px) {
+  #app {
+    width: 100% !important; } }
+
+@media screen and (max-width: 390px) {
+  #app {
+    flex-direction: column !important; }
+  #time_date {
+    text-align: center !important; }
+  #currency {
+    justify-content: center !important; }
+  #weather {
+    margin-top: 15px !important; }
+  .change_lang {
+    right: 15px !important; } }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  margin: 0; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#app {
+  width: 430px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 20px 50px 20px 35px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative; }
+
+#time_date {
+  max-width: 135px; }
+
+.time_output {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 15px; }
+
+.timezone {
+  font-size: 20px;
+  font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif";
+  margin-bottom: 15px; }
+
+.curr_date {
+  font-size: 15px;
+  margin-bottom: 25px; }
+
+#currency {
+  display: flex;
+  column-gap: 15px; }
+  #currency p {
+    color: green; }
+  #currency span {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #000; }
+
+#weather {
+  margin-top: -23px;
+  text-align: center;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.weather_icon {
+  width: 80px;
+  height: 80px; }
+
+.weather_degrees {
+  font-size: 25px;
+  margin-bottom: 5px;
+  font-weight: bold; }
+
+.weather_word {
+  font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif";
+  font-size: 25px;
+  margin-bottom: 5px; }
+
+.weather_description {
+  font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif";
+  font-size: 12px;
+  font-style: italic; }
+
+.change_lang {
+  position: absolute;
+  right: 8px;
+  top: 15px;
+  outline: none;
+  border-radius: 5px; }
+
+body {
+  font-family: "SB Sans Display", "sans-serif";
+  background: #EEF1F2; }
+
+.header_app {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 15px;
+  font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif"; }

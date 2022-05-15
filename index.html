@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <h1 class="header_app">Weather App</h1>
+    <div id="app">
+        <div id="time">
+            <div id="time_date">
+            <h1 class="time_output">22:18:55</h1>
+            <h3 class="timezone">Moscow</h3>
+            <h3 class="curr_date">15.05.2022</h3>
+            </div>
+            <div id="currency">
+                    <p class="dollar""><span>$</span>65,23</p>
+                    <p class="euro"><span>€</span>70,97</p>
+            </div>
+        </div>
+        <div id="weather">
+            <img src="/img/10d@2x.png" alt="weather" class="weather_icon">
+            <h3 class="weather_degrees">+23 ℃</h3>
+            <p class="weather_word">Облачно</p>
+            <p class="weather_description">Переменная облачность</p>
+        </div>
+        <select class="change_lang">
+            <option selected value="russian">RU</option>
+            <option value="english">EN</option>
+        </select>
+    </div>
     <script src="index.js" type="module"></script>
 </body>
 </html>
