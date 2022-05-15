@@ -23,15 +23,10 @@ export default class Clock {
       .getLocation()
       .then(() => {
         return new Promise((resolve) =>
-          setTimeout(
-            () =>
-              resolve(
-                fetch(
-                  `https://api.openweathermap.org/data/2.5/weather?lat=${Location.latitude}&lon=${Location.longitude}&appid=f366574461000687067bb791f7dbd2d4`
-                )
-              ),
-            0
-          )
+          setTimeout(() => {
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${Location.latitude}&lon=${Location.longitude}&appid=f366574461000687067bb791f7dbd2d4`;
+            resolve(fetch(url));
+          }, 0)
         );
       })
       .then((data) => data.json())
