@@ -1,5 +1,9 @@
+@import _weather.sass
+@import _clock.sass
+
 #app
     width: 430px
+    height: 187px
     border: 1px solid #fff
     border-radius: 5px
     margin: 0 auto
@@ -11,21 +15,16 @@
     align-items: center
     box-sizing: border-box
     position: relative
-// Time , date and currency
-#time_date
-    max-width: 135px
-.time_output
-    font-size: 30px
-    font-weight: bold
-    margin-top: $margin-bottom
-.timezone
-    font-size: 20px
-    font-family: $fonts-text
-    margin-bottom: $margin-bottom
-.curr_date
-    font-size: 15px
-    margin-bottom: 25px
-#currency
+
+// change language 
+.change_lang
+    position: absolute
+    right: 8px
+    top: 15px
+    outline: none
+    border-radius: 5px
+// currencies
+#currencies
     display: flex
     column-gap: 15px
     p
@@ -34,34 +33,3 @@
         font-size: 20px
         margin-right: 5px
         color: #000
-// weather
-#weather
-    margin-top: -23px
-    text-align: center
-    width: 160px
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-.weather_icon
-    width: 80px
-    height: 80px
-.weather_degrees
-    font-size: 25px
-    margin-bottom: 5px
-    font-weight: bold
-.weather_word
-    font-family: $fonts-text
-    font-size: 25px
-    margin-bottom: 5px
-.weather_description
-    font-family: $fonts-text
-    font-size: 12px
-    font-style: italic
-// change language 
-.change_lang
-    position: absolute
-    right: 8px
-    top: 15px
-    outline: none
-    border-radius: 5px

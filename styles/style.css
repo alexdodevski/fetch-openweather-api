@@ -57,47 +57,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-#app {
-  width: 430px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 60px;
-  padding: 20px 50px 20px 35px;
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  position: relative; }
-
-#time_date {
-  max-width: 135px; }
-
-.time_output {
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 15px; }
-
-.timezone {
-  font-size: 20px;
-  font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif";
-  margin-bottom: 15px; }
-
-.curr_date {
-  font-size: 15px;
-  margin-bottom: 25px; }
-
-#currency {
-  display: flex;
-  column-gap: 15px; }
-  #currency p {
-    color: green; }
-  #currency span {
-    font-size: 20px;
-    margin-right: 5px;
-    color: #000; }
-
 #weather {
   margin-top: -23px;
   text-align: center;
@@ -126,12 +85,55 @@ table {
   font-size: 12px;
   font-style: italic; }
 
+#clock {
+  max-width: 135px; }
+
+.clock_output {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px; }
+
+.clock_timezone {
+  font-size: 20px;
+  font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif";
+  margin-bottom: 15px; }
+
+.clock_date {
+  font-size: 15px;
+  margin-bottom: 25px; }
+
+#app {
+  width: 430px;
+  height: 187px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 20px 50px 20px 35px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative; }
+
 .change_lang {
   position: absolute;
   right: 8px;
   top: 15px;
   outline: none;
   border-radius: 5px; }
+
+#currencies {
+  display: flex;
+  column-gap: 15px; }
+  #currencies p {
+    color: green; }
+  #currencies span {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #000; }
 
 body {
   font-family: "SB Sans Display", "sans-serif";
