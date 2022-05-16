@@ -6,9 +6,9 @@ export default class Weather extends Request {
     div.id = "weather";
     this.weather = div;
   }
-  _createIcon(icon) {
+  _createIcon(id) {
     let img = document.createElement("img");
-    img.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    img.src = `https://openweathermap.org/img/wn/${id}@2x.png`;
     img.classList.add("weather_icon");
     this.weather.append(img);
   }
@@ -27,26 +27,25 @@ export default class Weather extends Request {
     this.weather.append(p);
   }
   _getWeather() {
-    this.getLocation()
+    this.getData()
       .then((data) => {
-        console.log(data.weather[0]);
         const weather = data.weather[0];
         const weatherData = {
           temp: data.main.temp,
-          icon: weather.icon,
+          iconId: weather.icon,
           word: weather.main,
           description: weather.description,
         };
         return weatherData;
       })
       .then((data) => {
-        this._createIcon(data.icon);
+        this._createIcon(data.iconId);
         this._createDegrees(data.temp);
         this._createText(data.word, "word");
         this._createText(data.description, "description");
       });
   }
-  render() {
+  init() {
     this._createWeather();
     this._getWeather();
     return this.weather;

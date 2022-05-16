@@ -5,7 +5,7 @@ export default class Clock extends Request {
     this.clock = document.createElement("div");
     this.clockOutput = document.createElement("h1");
     this.clockOutput.classList.add("clock_output");
-    this.clock.id = "time_date";
+    this.clock.id = "clock_date";
     this.clock.append(this.clockOutput);
   }
   _changeTime() {
@@ -18,7 +18,7 @@ export default class Clock extends Request {
     }:${seconds < 10 ? `0${seconds}` : `${seconds}`}`;
   }
   _createGeoAndDate() {
-    this.getLocation()
+    this.getData()
       .then(({ name }) => this._appendTimezone(name))
       .then(() => this._createCurrentDate())
       .then(() => this._changeTime())

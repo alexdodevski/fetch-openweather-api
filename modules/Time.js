@@ -7,7 +7,7 @@ export default class Time {
     this.currency = new Currency().init();
     this.div = document.createElement("div");
   }
-  render() {
+  init() {
     this.div.id = "time";
     this.div.append(this.clock);
     this.div.append(this.currency);

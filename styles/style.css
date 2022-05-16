@@ -1,3 +1,7 @@
+#weather, #time, .change_lang {
+  opacity: 0;
+  transition-duration: 0.4s; }
+
 @media screen and (max-width: 430px) {
   #app {
     width: 100% !important; } }
@@ -8,7 +12,7 @@
     justify-content: space-evenly !important;
     height: 374px !important;
     padding-right: 35px !important; }
-  #time_date {
+  #clock_date {
     text-align: center !important; }
   #currency {
     justify-content: center !important; }
@@ -60,6 +64,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+#weather, #time, .change_lang {
+  opacity: 0;
+  transition-duration: 0.4s; }
+
 #weather {
   margin-top: -23px;
   text-align: center;
@@ -88,7 +96,7 @@ table {
   font-size: 12px;
   font-style: italic; }
 
-#clock {
+#time {
   max-width: 135px; }
 
 .clock_output {

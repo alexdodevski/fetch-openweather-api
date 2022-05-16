@@ -23,13 +23,14 @@ export default class Currency {
   _createCurrency() {
     const div = document.createElement("div");
     div.id = "currencies";
-    this._getUsd().then(() => {
+
+    this._getEuro().then(() => {
       let p = document.createElement("p");
       p.innerHTML = `<span>${this.currencies[0].class}</span>${this.currencies[0].value}`;
       div.append(p);
     });
 
-    this._getEuro().then(() => {
+    this._getUsd().then(() => {
       let p = document.createElement("p");
       p.innerHTML = `<span>${this.currencies[1].class}</span>${this.currencies[1].value}`;
       div.append(p);
