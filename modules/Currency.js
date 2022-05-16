@@ -3,7 +3,7 @@ export default class Currency {
     this.url = `https://www.cbr-xml-daily.ru/daily_json.js`;
     this.currencies = [];
   }
-  async getUsd() {
+  async _getUsd() {
     let response = await fetch(this.url);
     let valutes = await response.json();
     this.currencies.push({
@@ -11,7 +11,7 @@ export default class Currency {
       value: valutes["Valute"]["USD"][`Value`].toFixed(1) + 0,
     });
   }
-  async getEuro() {
+  async _getEuro() {
     let response = await fetch(this.url);
     let valutes = await response.json();
     this.currencies.push({
@@ -23,13 +23,13 @@ export default class Currency {
   _createCurrency() {
     const div = document.createElement("div");
     div.id = "currencies";
-    this.getUsd().then(() => {
+    this._getUsd().then(() => {
       let p = document.createElement("p");
       p.innerHTML = `<span>${this.currencies[0].class}</span>${this.currencies[0].value}`;
       div.append(p);
     });
 
-    this.getEuro().then(() => {
+    this._getEuro().then(() => {
       let p = document.createElement("p");
       p.innerHTML = `<span>${this.currencies[1].class}</span>${this.currencies[1].value}`;
       div.append(p);

@@ -4,7 +4,10 @@
 
 @media screen and (max-width: 390px) {
   #app {
-    flex-direction: column !important; }
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+    height: 374px !important;
+    padding-right: 35px !important; }
   #time_date {
     text-align: center !important; }
   #currency {
@@ -78,7 +81,7 @@ table {
 .weather_word {
   font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif";
   font-size: 25px;
-  margin-bottom: 5px; }
+  margin-bottom: 7px; }
 
 .weather_description {
   font-family: "SB Sans Text", "SB Sans Text Italic", "sans-serif";
@@ -101,7 +104,7 @@ table {
 
 .clock_date {
   font-size: 15px;
-  margin-bottom: 25px; }
+  margin-bottom: 20px; }
 
 #app {
   width: 430px;

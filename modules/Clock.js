@@ -1,7 +1,7 @@
-import Location from "./Location.js";
+import Request from "./Request.js";
 
-export default class Clock {
-  _createTime() {
+export default class Clock extends Request {
+  _createClock() {
     this.clock = document.createElement("div");
     this.clockOutput = document.createElement("h1");
     this.clockOutput.classList.add("clock_output");
@@ -17,21 +17,11 @@ export default class Clock {
       minutes < 10 ? `0${minutes}` : `${minutes}`
     }:${seconds < 10 ? `0${seconds}` : `${seconds}`}`;
   }
-  _createLocation() {
-    let location = new Location();
-    location
-      .getLocation()
-      .then(() => {
-        return new Promise((resolve) =>
-          setTimeout(() => {
-            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${Location.latitude}&lon=${Location.longitude}&appid=f366574461000687067bb791f7dbd2d4`;
-            resolve(fetch(url));
-          }, 0)
-        );
-      })
-      .then((data) => data.json())
+  _createGeoAndDate() {
+    this.getLocation()
       .then(({ name }) => this._appendTimezone(name))
-      .then(() => this._crateCurrentDate())
+      .then(() => this._createCurrentDate())
+      .then(() => this._changeTime())
       .catch((err) => console.log(err));
   }
 
@@ -41,7 +31,7 @@ export default class Clock {
     h3.classList.add("clock_timezone");
     this.clock.append(h3);
   }
-  _crateCurrentDate() {
+  _createCurrentDate() {
     const h3 = document.createElement("h3");
     const date = new Date();
     const year = date.getFullYear();
@@ -54,9 +44,8 @@ export default class Clock {
     this.clock.append(h3);
   }
   init() {
-    this._createLocation();
-    this._createTime();
-    this._changeTime();
+    this._createClock();
+    this._createGeoAndDate();
     setInterval(() => {
       this._changeTime();
     }, 1000);

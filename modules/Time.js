@@ -10,7 +10,6 @@ export default class Time {
   render() {
     this.div.id = "time";
     this.div.append(this.clock);
-    console.log(this.currency);
     this.div.append(this.currency);
     return this.div;
   }

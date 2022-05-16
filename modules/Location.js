@@ -1,6 +1,6 @@
 export default class Location {
-  async getLocation() {
-    return navigator.geolocation.getCurrentPosition(this._success, this._error);
+  async getCoords() {
+    navigator.geolocation.getCurrentPosition(this._success, this._error);
   }
   _success({ coords }) {
     const { latitude, longitude } = coords;
