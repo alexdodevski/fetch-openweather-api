@@ -13,7 +13,7 @@ export default class Request {
           console.log(coords, coords.latitude, coords.longitude);
           const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=f366574461000687067bb791f7dbd2d4`;
           resolve(this._reguest(url));
-        }, 0)
+        }, 500)
       );
     });
   }
