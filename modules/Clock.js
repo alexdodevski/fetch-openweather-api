@@ -13,7 +13,7 @@ export default class Clock extends Request {
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
-    this.clockOutput.innerHTML = `${hours}:${
+    this.clockOutput.innerHTML = `${hours === 0 ? `0${hours}` : `${hours}`}:${
       minutes < 10 ? `0${minutes}` : `${minutes}`
     }:${seconds < 10 ? `0${seconds}` : `${seconds}`}`;
   }
