@@ -18,7 +18,7 @@ export default class Clock extends Request {
     }:${seconds < 10 ? `0${seconds}` : `${seconds}`}`;
   }
   _createGeoAndDate() {
-    this.getData()
+    this.getDataOpenMap()
       .then(({ name }) => this._appendCity(name))
       .then(() => this._createCurrentDate())
       .then(() => this._changeTime())

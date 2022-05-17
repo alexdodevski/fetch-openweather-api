@@ -28,7 +28,7 @@ export default class Weather extends Request {
     this.weather.append(p);
   }
   _getWeather() {
-    this.getData()
+    this.getDataOpenMap()
       .then((data) => {
         const weather = data.weather[0];
         const weatherData = {
