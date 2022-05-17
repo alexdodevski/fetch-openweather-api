@@ -20,9 +20,6 @@ export default class App {
   render(elems) {
     const promise = new Promise((resolve) => {
       for (let elem of elems) {
-        if (elem.name === "ChangeLang") {
-          this.selectLangueage = new elem();
-        }
         this.childs.push(new elem().init());
       }
       resolve();
@@ -51,15 +48,14 @@ export default class App {
       })
       .then(() => {
         const select = this.childs[2];
-        const changeLanguage = this.selectLangueage.changeLanguage.bind(this);
         select.addEventListener("change", () => {
-          let arr = [];
+          let elems = [];
           for (let child of this.childs) {
             if (child.tagName === "DIV") {
-              arr.push(child);
+              elems.push(child);
             }
           }
-          changeLanguage(arr, select.children);
+          this.changeLanguage(elems, select.children);
         });
       });
   }

@@ -1,31 +1,33 @@
-export const translateRus = {
+export const translateOnRus = {
   city: {
     Korolyov: "Королёв",
     Moscow: "Москва",
     "Saint-Petersburg": "Санкт-Петербург",
     Mytishchi: "Мытищи",
   },
-  text: {
-    clouds: "Облачно",
-    sun: "Солнечно",
+  word: {
+    Clouds: "Облачно",
+    Sun: "Солнечно",
   },
   description: {
     "broken clouds": "небольшая облачность",
+    "overcast clouds": "пасмурно",
   },
 };
 
-export const translateEng = {
+export const translateOnEng = {
   city: {
     Королёв: "Korolyov",
     Москва: "Moscow",
     "Санкт-Петербург": "Saint-Petersburg",
     Мытищи: "Mytishchi",
   },
-  text: {
-    облачно: "Clouds",
-    солнечно: "Sun",
+  word: {
+    Облачно: "Clouds",
+    Солнечно: "Sun",
   },
   description: {
     "небольшая облачность": "broken clouds",
+    пасмурно: "overcast clouds",
   },
 };

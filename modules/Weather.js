@@ -24,6 +24,7 @@ export default class Weather extends Request {
     let p = document.createElement("p");
     p.classList.add(`weather_${className}`);
     p.textContent = text;
+    p.setAttribute("data-translate", className);
     this.weather.append(p);
   }
   _getWeather() {

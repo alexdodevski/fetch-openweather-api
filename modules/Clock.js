@@ -19,16 +19,17 @@ export default class Clock extends Request {
   }
   _createGeoAndDate() {
     this.getData()
-      .then(({ name }) => this._appendTimezone(name))
+      .then(({ name }) => this._appendCity(name))
       .then(() => this._createCurrentDate())
       .then(() => this._changeTime())
       .catch((err) => console.log(err));
   }
 
-  _appendTimezone(city) {
+  _appendCity(city) {
     const h3 = document.createElement("h3");
     h3.textContent = city;
-    h3.classList.add("clock_timezone");
+    h3.classList.add("clock_city");
+    h3.setAttribute("data-translate", "city");
     this.clock.append(h3);
   }
   _createCurrentDate() {
