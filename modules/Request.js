@@ -6,12 +6,12 @@ export default class Request {
     return data;
   }
   async getDataOpenMap() {
-    return getCoords().then((coords) => {
+    return getCoords().then((url) => {
       return new Promise((resolve) =>
         // задержка для подгрузки координатов из getCoords ,т.к если получить их ДО таймера будет undefined
         setTimeout(() => {
-          console.log(coords, coords.latitude, coords.longitude);
-          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=f366574461000687067bb791f7dbd2d4`;
+          console.log(url);
+          // const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=f366574461000687067bb791f7dbd2d4`;
           resolve(this._reguest(url));
         }, 500)
       );
