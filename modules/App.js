@@ -31,12 +31,13 @@ export default class App {
   _selectEvent() {
     const select = this.childs[2];
     select.addEventListener("change", () => {
-      let elems = [];
-      for (let child of this.childs) {
+      let elems = Array.from(this.childs).reduce((acc, child) => {
         if (child.tagName === "DIV") {
-          elems.push(child);
+          acc.push(child);
         }
-      }
+        return acc;
+      }, []);
+
       this.changeLanguage(elems, select.children);
     });
   }
