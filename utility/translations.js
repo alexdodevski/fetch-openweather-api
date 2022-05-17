@@ -8,10 +8,12 @@ export const translateOnRus = {
   word: {
     Clouds: "Облачно",
     Sun: "Солнечно",
+    Rain: "Дождь",
   },
   description: {
     "broken clouds": "небольшая облачность",
     "overcast clouds": "пасмурно",
+    "light rain": "легкий дождь",
   },
 };
 
@@ -25,9 +27,11 @@ export const translateOnEng = {
   word: {
     Облачно: "Clouds",
     Солнечно: "Sun",
+    Дождь: "Rain",
   },
   description: {
     "небольшая облачность": "broken clouds",
     пасмурно: "overcast clouds",
+    "легкий дождь": "light rain",
   },
 };
