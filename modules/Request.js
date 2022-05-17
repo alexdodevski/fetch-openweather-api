@@ -18,7 +18,7 @@ export default class Request {
       setTimeout(() => {
         console.log(url);
         resolve(this._reguest(url));
-      }, 0);
+      }, 500);
     });
   }
 }

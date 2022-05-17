@@ -51,7 +51,7 @@ export default class App {
           this.app.append(item);
         });
         res();
-      }, 500);
+      }, 1000);
     });
   }
 
