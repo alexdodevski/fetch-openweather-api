@@ -17,6 +17,7 @@ export const translateOnRus = {
     "light rain": "легкий дождь",
     "clear sky": "ясное небо",
     "few clouds": "облачно с прояснениями",
+    "scattered clouds": "рассеянные облака",
   },
 };
 
@@ -39,5 +40,6 @@ export const translateOnEng = {
     "легкий дождь": "light rain",
     "ясное небо": "clear sky",
     "облачно с прояснениями": "few clouds",
+    "рассеянные облака": "scattered clouds",
   },
 };
