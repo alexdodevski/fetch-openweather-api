@@ -16,6 +16,7 @@ export const translateOnRus = {
     "overcast clouds": "пасмурно",
     "light rain": "легкий дождь",
     "clear sky": "ясное небо",
+    "few clouds": "облачно с прояснениями",
   },
 };
 
@@ -37,5 +38,6 @@ export const translateOnEng = {
     пасмурно: "overcast clouds",
     "легкий дождь": "light rain",
     "ясное небо": "clear sky",
+    "облачно с прояснениями": "few clouds",
   },
 };
